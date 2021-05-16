@@ -1,0 +1,6 @@
+<h1>New alarm</h1>
+<%= form_with url: "/alarms/test", method: :get do |form| %>
+  <%= form.collection_select :id_device, current_user.spotify.devices, :id, :name %>
+  <%= form.collection_select :uri_track, current_user.spotify.saved_tracks, :uri, :name %>
+  <%= form.submit "Test" %>
+<% end %>
