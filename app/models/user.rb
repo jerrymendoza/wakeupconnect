@@ -3,9 +3,9 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first_or_initialize
     user.update(
-      name: auth.info.name,
+      name: auth.info.display_name,
       email: auth.info.email,
-      username: auth.info.nickname,
+      username: auth.info.id,
       token: auth.credentials.token,
       refresh_token: auth.credentials.refresh_token
     )

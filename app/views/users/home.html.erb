@@ -1,4 +1,6 @@
 <h1>Home users</h1>
 <p>Welcome <%= current_user.name %></p>
 <%= current_user.username %>
+<%= current_user.email %>
+<%= current_user.token %>
 <%= link_to "Logout", logout_path, method: :delete%>
