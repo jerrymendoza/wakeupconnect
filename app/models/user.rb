@@ -11,4 +11,15 @@ class User < ApplicationRecord
     )
     user
   end
+
+  def spotify
+    RSpotify::User.new(
+    {
+      'credentials' => {
+        "token" => self.token,
+        "refresh_token" => self.refresh_token
+      } ,
+      'id' => self.username
+    })
+  end
 end
