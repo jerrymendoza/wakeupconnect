@@ -1,8 +1,14 @@
 class User < ApplicationRecord
+  validates :username, uniqueness: true
   def self.from_omniauth(auth)
-    where(email: auth.info.email).first_or_initialize do |user|
-      user.name = auth.info.name
-      user.email = auth.info.email
-    end
+    user = User.where(email: auth.info.email).first_or_initialize
+    user.update(
+      name: auth.info.name,
+      email: auth.info.email,
+      username: auth.info.nickname,
+      token: auth.credentials.token,
+      refresh_token: auth.credentials.refresh_token
+    )
+    user
   end
 end
