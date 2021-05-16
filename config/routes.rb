@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback' => 'sessions#omniauth'
   get '/home' => 'users#home'
   delete '/logout' => 'sessions#destroy'
-  get '/alarms/new' => 'alarms#new'
+  get '/alarms/new' => 'alarms#new', as: 'new_alarm'
   get '/alarms/test' => 'alarms#test'
 
 end

@@ -1,0 +1,7 @@
+<% if current_user %>
+<%= current_user.name %> | <%= current_user.username %> | <%= link_to "Logout", logout_path, method: :delete%>
+<ul><li><%= link_to "New Alarm", new_alarm_path %></li></ul>
+<% else %>
+
+<%= link_to "Login with Spotify", "/auth/spotify", method: :post %>
+<% end %>
