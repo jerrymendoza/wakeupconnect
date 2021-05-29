@@ -1,6 +1,7 @@
 class AlarmsController < ApplicationController
 
   def new
+    @alarm = Alarm.new
   end
 
   def test

@@ -4,3 +4,5 @@
   <%= form.collection_select :uri_track, current_user.spotify.saved_tracks, :uri, :name %>
   <%= form.submit "Test" %>
 <% end %>
+
+<%= render "form", alarm: @alarm %>
