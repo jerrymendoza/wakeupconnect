@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_05_16_191617) do
 
   create_table "alarms", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.time "time"
+    t.datetime "time"
     t.string "track"
     t.string "device"
     t.datetime "created_at", precision: 6, null: false

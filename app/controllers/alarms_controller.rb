@@ -13,9 +13,8 @@ class AlarmsController < ApplicationController
 
   def create
     @alarm = Alarm.new(alarm_params.merge(user_id: current_user.id))
-    
     if @alarm.save
-      @alarm.ring
+      AlarmJob.set(wait_until: @alarm.time).perform_later(@alarm)
       redirect_to alarms_path
     else
       flash.now[:messages] = @alarm.errors.full_messages[0]
