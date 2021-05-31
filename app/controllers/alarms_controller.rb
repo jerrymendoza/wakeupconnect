@@ -13,7 +13,9 @@ class AlarmsController < ApplicationController
 
   def create
     @alarm = Alarm.new(alarm_params.merge(user_id: current_user.id))
+    
     if @alarm.save
+      @alarm.ring
       redirect_to alarms_path
     else
       flash.now[:messages] = @alarm.errors.full_messages[0]
@@ -36,13 +38,6 @@ class AlarmsController < ApplicationController
  
     redirect_to alarms_url, notice: 'Alarm was successfully deleted.'
 
-  end
-
-  def test
-    puts params
-    player = current_user.spotify.player
-    player.play_track(params[:id_device], params[:uri_track])
-    redirect_to home_path
   end
   
   private
