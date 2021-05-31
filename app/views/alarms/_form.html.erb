@@ -1,14 +1,15 @@
-<%= form_with model: alarm do |form| %>
+<%= form_with(model: alarm, local: true, remote: true) do |form| %>
   <%= form.label :device %>
-  <%= form.collection_select :id_device, current_user.spotify.devices, :id, :name %>
+  <%= form.collection_select :device, current_user.spotify.devices, :id, :name %>
 
   <%= form.label :track %>
-  <%= form.collection_select :uri_track, current_user.spotify.saved_tracks, :uri, :name %>
+  <%= form.collection_select :track, current_user.spotify.saved_tracks, :uri, :name %>
 
   <%= form.label :time %>
-  <%= form.time_field :time,
-      value: "%H:%M",
-      min: 'hh:mm:ss',
-      max: 'hh:mm:ss'
+  <%= form.time_select :time,
+      default: Time.now 
   %>
+  
+  <%= form.submit %>
+  
 <% end %>

@@ -12,6 +12,11 @@
 
   <body>
     <%= render "shared/menu" %>
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
