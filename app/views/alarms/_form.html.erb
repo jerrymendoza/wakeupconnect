@@ -9,6 +9,9 @@
   <%= form.time_select :time,
       default: Time.now 
   %>
+
+  <%= form.label :repeat_daily %>
+  <%= form.check_box(:repeat_daily) %>
   
   <%= form.submit %>
   

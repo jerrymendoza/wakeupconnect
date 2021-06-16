@@ -15,4 +15,16 @@ class Alarm < ApplicationRecord
     self.time -= Time.zone_offset(Time.now.zone)
   end
 
+  def schedule
+    if Time.now > self.time
+      self.time += 1.day
+    end
+    AlarmJob.set(wait_until: self.time).perform_later(self)
+  end
+
+  def reschedule
+    if self.repeat_daily
+      self.schedule
+    end
+  end
 end

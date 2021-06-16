@@ -12,9 +12,10 @@ class AlarmsController < ApplicationController
   end
 
   def create
+    p params
     @alarm = Alarm.new(alarm_params.merge(user_id: current_user.id))
     if @alarm.save
-      AlarmJob.set(wait_until: @alarm.time).perform_later(@alarm)
+      @alarm.schedule
       redirect_to alarms_path
     else
       flash.now[:messages] = @alarm.errors.full_messages[0]
@@ -47,7 +48,7 @@ class AlarmsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def alarm_params
-    params.require(:alarm).permit(:time, :track, :device)
+    params.require(:alarm).permit(:time, :track, :device, :repeat_daily)
   end
 
 end

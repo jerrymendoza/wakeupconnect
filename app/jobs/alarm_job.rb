@@ -3,5 +3,6 @@ class AlarmJob < ApplicationJob
 
   def perform(alarm)
     alarm.ring!
+    alarm.reschedule
   end
 end
