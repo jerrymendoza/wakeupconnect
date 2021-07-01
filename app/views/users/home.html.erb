@@ -1,5 +1,36 @@
+
+
 <h1>Home users</h1>
-<ul>
-<li><%= link_to "New Alarm", new_alarm_path, class: "btn btn-black" %></li>
-<li><%= link_to "My Alarms", alarms_path, class: "btn btn-black" %></li>
-</ul>
+
+<div class="center">
+    <div id="clock" class="clock"></div>
+    <div id="date" class="clock"></div>
+    <ul>
+    <li><%= link_to "New Alarm", new_alarm_path, class: "btn btn-black" %></li>
+    <li><%= link_to "My Alarms", alarms_path, class: "btn btn-black" %></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var clock = document.getElementById("clock");
+    var date = document.getElementById("date");
+    var days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' , 'Oct', 'Nov', 'Dec']
+    function time() {
+        var d = new Date();
+        var seconds = d.getSeconds();
+        var minutes = d.getMinutes();
+        var hours = d.getHours();
+        var ampm = hours >= 12 ? 'p.m.' : 'a.m.';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        if (hours < 10) {
+            hours = '0' + hours
+        }
+        clock.textContent = hours + ":" + ("0" + minutes).substr(-2) + ":" + ("0" + seconds).substr(-2) ;
+        clock.innerHTML +=  "<span id='ampm'> " + ampm + "</span>"
+        date.textContent = days[d.getDay()] + " - " + months[d.getMonth()] + " " + d.getDate() + " " + d.getFullYear();
+    }
+    time();
+    setInterval(time, 1000);
+</script>
