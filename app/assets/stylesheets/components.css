@@ -4,6 +4,14 @@
     src: url('Montserrat-Light.otf');
  }
 
+ @font-face {
+    font-family: 'LCDMB';
+    src: url('LCDMB___.ttf');
+ }
+
+.center ul {
+    padding:25px 0;
+} 
 li {
     display: inline-block;
 }
@@ -12,7 +20,7 @@ li {
 }
 .btn {
     border: 1px black solid;
-    padding: 22px 33px;
+    padding: 18px 30px;
     display: inline-block;
     border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
@@ -30,3 +38,25 @@ li {
 a {
     text-decoration: none;
 }
+
+.clock {
+    font-family: 'LCDMB', sans-serif;
+    text-transform: uppercase;
+}
+#clock {
+    font-size: 115px;
+    padding:25px 0;
+    
+}
+#date {
+    font-size: 38px;
+    padding:25px 0;
+
+}
+#ampm {
+    font-size: 60px;
+}
+.center {
+    padding: 70px 0;
+    text-align: center;
+  }
