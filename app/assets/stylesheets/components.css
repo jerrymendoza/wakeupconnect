@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('Montserrat-Light.otf');
+ }
+
+li {
+    display: inline-block;
+}
+.page {
+    border-top:10px solid black;
+}
+.btn {
+    border: 1px black solid;
+    padding: 22px 33px;
+    display: inline-block;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
+    margin: 0px 10px;
+}
+
+.btn-black {
+    background-color: black;
+    color:white;
+    font-weight:800;
+}
+
+a {
+    text-decoration: none;
+}
