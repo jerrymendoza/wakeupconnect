@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :alarms
   validates :username, uniqueness: true
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first_or_initialize

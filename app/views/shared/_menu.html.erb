@@ -1,5 +1,5 @@
 <% if current_user %>
-<%= current_user.name %> | <%= current_user.username %> | <%= link_to "Logout", logout_path, method: :delete%>
+<%= current_user.name %> | <%= current_user.username %> | <%= link_to "Logout", logout_path, method: :delete%> | <%= link_to "Home", root_path %>
 <ul><li><%= link_to "New Alarm", new_alarm_path %></li></ul>
 <% else %>
 
