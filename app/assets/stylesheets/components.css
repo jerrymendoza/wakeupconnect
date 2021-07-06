@@ -9,6 +9,7 @@
     src: url('LCDMB___.ttf');
  }
 
+
 .center ul {
     padding:25px 0;
 } 
@@ -17,16 +18,18 @@ li {
 }
 .page {
     border-top:10px solid black;
+    padding:25px 50px;
 }
 .btn {
     border: 1px black solid;
-    padding: 18px 30px;
+    padding: 1.1em 1.6em;
     display: inline-block;
-    border-radius: 30px;
+    border-radius: 3em;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-transform: lowercase;
     margin: 0px 10px;
+    font-size: 13px;
 }
 
 .btn-black {
@@ -44,19 +47,57 @@ a {
     text-transform: uppercase;
 }
 #clock {
-    font-size: 115px;
-    padding:25px 0;
+    font-size: 90px;
+    padding:15px 0;
     
 }
 #date {
-    font-size: 38px;
+    font-size: 30px;
     padding:25px 0;
 
 }
 #ampm {
-    font-size: 60px;
+    font-size: 50px;
 }
 .center {
-    padding: 70px 0;
+    padding: 190px 0 130px;
     text-align: center;
   }
+#header {
+    
+}
+#header .logo {
+    width: 175px;
+}
+
+#footer {
+    height: 40px;
+    margin:10px;
+}
+
+#footer img {
+    height: 40px;
+}
+
+
+#warning, #info {
+    display: inline-block;
+}
+#warning * {
+    display: inline-block;
+}
+#info {
+    float:right;
+}
+#warning p {
+    position: relative;
+    bottom: 10px;
+    left:10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    
+}
+
+.logout {
+    font-size: 12px;
+}
