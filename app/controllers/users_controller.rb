@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   def welcome
     if logged_in?
       redirect_to home_path
+    else
+      render layout: false
     end
   end
 
