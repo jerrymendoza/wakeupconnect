@@ -2,7 +2,6 @@
     display: flex;
 }
 
-
 .welcome div{
     background-color: white;
     width: 50%;
@@ -40,7 +39,6 @@
     width: 33vw;
 }
 
-
 .welcome-content .logo {
     width: 100%;
 }
@@ -49,13 +47,18 @@
     font-family: proxima-nova, sans-serif;
     font-weight: 700;
     font-style: normal;
+
     border: 1px solid black;
-    font-size: 1.3vw;
     border-radius: 5vw;
     padding: 1em 2em;
-    color:black;
+    
 }
 
+.btn-white {
+    background-color: white;
+    color:black;
+    font-size: 1.3vw;
+}
 a.button-login:visited  {
     color:black;
 }
