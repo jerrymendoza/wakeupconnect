@@ -1,103 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@font-face {
-    font-family: 'Montserrat-Light';
-    src: url('Montserrat-Light.otf');
- }
+* {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
 
- @font-face {
+@font-face {
     font-family: 'LCDMB';
     src: url('LCDMB___.ttf');
  }
 
-
-.center ul {
-    padding:25px 0;
-} 
-li {
-    display: inline-block;
-}
 .page {
-    border-top:10px solid black;
-    padding:25px 50px;
-}
-.btn {
-    border: 1px black solid;
-    padding: 1.1em 1.6em;
-    display: inline-block;
-    border-radius: 3em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    text-transform: lowercase;
-    margin: 0px 10px;
-    font-size: 13px;
+    border-top:1.5vh solid black;
+    position:absolute;
+    width:100%;
+    height:98.5vh;
+    display: flex;
+    flex-direction:column;
 }
 
-.btn-black {
-    background-color: black;
-    color:white;
-    font-weight:800;
+.center {
+    margin:3vh 4vw;
+    width:92vw;
+    height:94vh;
+}
+.logo {
+    width: 11vw;
 }
 
-a {
-    text-decoration: none;
+.warning {
+    width: 2.5vw;
+}
+
+.content {
+    display:flex;
+    height: 77vh;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content:center;
+}
+
+.content > * {
+    margin-top: 3%;
+}
+#clock {
+    font-size: 12vh;
+    display:block;
 }
 
 .clock {
     font-family: 'LCDMB', sans-serif;
     text-transform: uppercase;
-}
-#clock {
-    font-size: 90px;
-    padding:15px 0;
-    
-}
-#date {
-    font-size: 30px;
-    padding:25px 0;
-
-}
-#ampm {
-    font-size: 50px;
-}
-.center {
-    padding: 190px 0 130px;
     text-align: center;
-  }
-#header {
-    
 }
-#header .logo {
-    width: 175px;
+
+#date {
+    font-size: 3.5vh;
+}
+
+#ampm {
+    font-size: 6vh;
 }
 
 #footer {
-    height: 40px;
-    margin:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.95vw;
 }
-
-#footer img {
-    height: 40px;
+#footer p {
+    margin-bottom: 0.2em;
+    margin-left: 0.2em;
 }
-
-
-#warning, #info {
+#warning {
+    display: flex;
+    align-items: flex-end;
+}
+li {
     display: inline-block;
-}
-#warning * {
-    display: inline-block;
-}
-#info {
-    float:right;
-}
-#warning p {
-    position: relative;
-    bottom: 10px;
-    left:10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    
+    margin:3vh 0.5vw !important
 }
 
-.logout {
-    font-size: 12px;
+.btn-black {
+    background-color: black;
+    color:white ;
+    text-transform: lowercase;
+    font-size: 1.8vh;
+    padding: 0.7em 1.5em !important;
 }
