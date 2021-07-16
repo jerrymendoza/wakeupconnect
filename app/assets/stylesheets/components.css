@@ -92,3 +92,19 @@ li {
     font-size: 1.8vh;
     padding: 0.7em 1.5em !important;
 }
+
+#info {
+    display: flex;
+    align-items: stretch;
+}
+
+#profile-img {
+    border: 1px solid black;
+    margin-top: 1px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 4.5vh;
+    background-image: url(user2.png);
+    background-size: cover;
+    background-position: top; 
+}
