@@ -1,13 +1,16 @@
 <div id="footer">
-<div id="warning"><img class="warning" src=<%= image_path("advertencia.svg") %> alt="warning"> <div><p>Your device must be turned on and connected to the internet</p></div></div>
-<div id="info">
-    <% if current_user %>
-    <%= link_to "Logout", logout_path, method: :delete ,  class: "btn btn-black logout"%>
-    <% else %>
+    <div id="warning">
+        <img class="warning" src=<%= image_path("advertencia.svg") %> alt="warning">
+        <div>
+            <p>Your device must be turned on and connected to the internet</p>
+        </div>
+    </div>
 
-    <%= link_to "Login with Spotify", "/auth/spotify", method: :post %>
-    <% end %>
-</div>
+    <div id="info">
+        <% if current_user %>
+            <%= link_to "Logout", logout_path, method: :delete ,  class: "btn btn-black logout" %>
+        <% end %>
+    </div>
 </div>
 
 
