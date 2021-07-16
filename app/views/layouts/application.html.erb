@@ -8,16 +8,21 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.typekit.net/sqo5pwt.css">
   </head>
 
   <body class='page'>
+  <div class="center">
   <%= render "shared/header" %>
     <% flash.each do |type, msg| %>
       <div>
         <%= msg %>
       </div>
     <% end %>
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
+  </div>
   </body>
 </html>
