@@ -1,4 +1,5 @@
-<h1>New alarm</h1>
-<p>Time: <%= Time.now %></p>
-<%= render "form", alarm: @alarm %>
-<%= link_to 'Back', alarms_path %>
+<div id="content-in-columns">
+<div class="content-column content-left"><h1>New alarm</h1></div>
+<div class="content-column content-center"><%= render "form", alarm: @alarm %></div>
+<div class="content-column content-right"><%= link_to 'Back', root_path %></div>
+</div>
