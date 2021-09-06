@@ -5,3 +5,4 @@
     <li><%= alarm.time %> <%= alarm.track %> <%= alarm.device %> | <button class="btn btn-default"><%= link_to 'Edit', edit_alarm_path(alarm) %></button> | <button class="btn btn-warning"><%= link_to 'Delete', alarm, method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
 <% end %>
 </ul>
+<%= link_to 'Back', root_path %>
