@@ -1,18 +1,23 @@
 <%= form_with(model: alarm, local: true, remote: true) do |form| %>
+  <div class="form-line">
   <%= form.label :device %>
   <%= form.collection_select :device, current_user.spotify.devices, :id, :name %>
-
+  </div>
+  <div class="form-line">
   <%= form.label :track %>
   <%= form.collection_select :track, current_user.spotify.saved_tracks, :uri, :name %>
-
+  </div>
+  <div class="form-line">
   <%= form.label :time %>
   <%= form.time_select :time,
       default: Time.now 
   %>
-
+  </div>
+  <div class="form-line">
   <%= form.label :repeat_daily %>
   <%= form.check_box(:repeat_daily) %>
-  
+  </div>
+  <div class="form-line">
   <%= form.submit %>
-  
+  </div>
 <% end %>

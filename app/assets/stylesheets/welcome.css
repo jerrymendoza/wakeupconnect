@@ -1,0 +1,64 @@
+.welcome {
+    display: flex;
+}
+
+.welcome div{
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+}
+
+.welcome-img {
+    background-image: url(speaker-unsplash.jpeg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.welcome-content {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome p {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.6vw;
+    max-width: 31vw;
+    text-align: center;
+    line-height: 130%;
+}
+
+.welcome-content > * {
+    margin-bottom: 2.5%;
+}
+.welcome-content span {
+    width: 33vw;
+}
+
+.welcome-content .logo {
+    width: 100%;
+}
+
+.button {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    border: 1px solid black;
+    border-radius: 5vw;
+    padding: 1em 2em;
+    
+}
+
+.btn-white {
+    background-color: white;
+    color:black;
+    font-size: 1.3vw;
+}
+a.button-login:visited  {
+    color:black;
+}
