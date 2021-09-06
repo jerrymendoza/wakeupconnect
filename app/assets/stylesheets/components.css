@@ -144,7 +144,6 @@ label {
     justify-content: center;
 
 }
-
 .content-left, .content-right {
     width: 30%;
 }
@@ -156,5 +155,35 @@ label {
 .content-center > *{ 
     border-left:black solid 1px;
     border-right:black solid 1px;
-    padding: 1% 2%;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.content-column h1 {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.content-right a {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color:black;
+    font-size:1.5em;
+}
+
+.content-center form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.form-line {
+    display: flex;
+    font-size: 1.3em;
+}
+
+.form-line label {
+    width: 40%;
 }
