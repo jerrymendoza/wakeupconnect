@@ -1,0 +1,34 @@
+.my-alarms {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.my-alarms li {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+
+.my-alarms .form-songinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-alarms .form-time , .my-alarms .form-actions{
+    flex-grow: 1;
+    width: 10%;
+}
+.my-alarms .form-songinfo {
+    flex-grow: 3;
+    width: 75%;
+    padding-left: 5%;
+}
+
+.form-songinfo .device-name {
+    font-style:italic;
+    font-weight: 100;
+    font-size: 0.8em;
+}

@@ -1,6 +1,8 @@
-<h1>Editing Alarm</h1>
+<div id="content-in-columns">
+<div class="content-column content-left"><h1>Editing Alarm</h1></div>
 
-<%= render 'form', alarm: @alarm %>
+<div class="content-column content-center"><%= render 'form', alarm: @alarm %></div>
 
-<%= link_to 'Show', @alarm %> |
-<%= link_to 'Back', alarms_path %>
+<div class="content-column content-right">
+<%= link_to 'Back', alarms_path %></div>
+</div>

@@ -1,9 +1,22 @@
 <div id="content-in-columns">
 <div class="content-column content-left"><h1>My alarms</h1></div>
 <div class="content-column content-center">
-<ul>
+<ul class="my-alarms">
 <% @alarms.each do |alarm| %>
-    <li><%= alarm.time %> <%= alarm.track %> <%= alarm.device %> | <button class="btn btn-default"><%= link_to 'Edit', edit_alarm_path(alarm) %></button> | <button class="btn btn-warning"><%= link_to 'Delete', alarm, method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
+    <li>
+    <div class="form-time">
+    <%= alarm.locale_time.strftime("%H:%M") %>
+    </div>
+    <div class="form-songinfo">
+    <%= alarm.spotify_track.name %> <% alarm.spotify_track.artists.each { |artist|%> <%= artist.name %> <%} %>
+    <div class="device-name"><%= alarm.spotify_device.name %></div>
+    </div>
+    
+    <div class="form-actions">
+    <button class="btn btn-default"><%= link_to 'Edit', edit_alarm_path(alarm) %></button>
+    <button class="btn btn-warning"><%= link_to 'Delete', alarm, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    </div>
+    </li>
 <% end %>
 </ul>
 </div>

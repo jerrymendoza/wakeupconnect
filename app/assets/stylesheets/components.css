@@ -138,6 +138,24 @@ label {
     flex-direction: row;
     justify-content: center;
 }
+@media screen and (max-width: 800px) {
+    #content-in-columns {
+        flex-direction: column;
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+   
+    }
+    #content-in-columns > *{
+        padding-bottom: 5%;
+    }
+    .content-left, .content-right {
+        width: 100% !important; 
+    }
+    .content-center {
+        width: 80% !important;
+    }
+  }
 .content-column {
     display: flex;
     align-items: center;
@@ -187,3 +205,4 @@ label {
 .form-line label {
     width: 40%;
 }
+

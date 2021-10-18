@@ -15,6 +15,10 @@ class Alarm < ApplicationRecord
     self.time -= Time.zone_offset(Time.now.zone)
   end
 
+  def locale_time
+    self.time += Time.zone_offset(Time.now.zone)
+  end
+  
   def schedule
     if Time.now > self.time
       self.time += 1.day
@@ -26,5 +30,16 @@ class Alarm < ApplicationRecord
     if self.repeat_daily
       self.schedule
     end
+  end
+
+  def spotify_track
+    puts self.read_attribute(:track).class
+    RSpotify::Track.find(self.read_attribute(:track).split(":")[-1])
+  end
+
+  def spotify_device
+    user = User.find(self.user_id)
+    devices = user.spotify.devices
+    return devices.find { |device| device.id == self.device }
   end
 end
